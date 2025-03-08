@@ -2,13 +2,14 @@
 
 ## Overview
 
-MOO-OS is a lightweight, cow-themed operating system built entirely in Python. Designed for fun and educational purposes, MOO-OS provides a playful environment where users can interact with a variety of cow-themed commands, utilities, and games. Whether you're looking to moo like a cow, play a guessing game, or even simulate a hacking session, MOO-OS has something for everyone.
+MOO-OS is a lightweight, cow-themed operating system built entirely in Python. Designed for **entertainment purposes**, MOO-OS provides a playful environment where users can interact with a variety of cow-themed commands, utilities, and games and it's Default Shell is csh (Cow Shell), Whether you're looking to moo like a cow, play a guessing game, or even simulate a hacking session, MOO-OS has something for everyone.
 
-The system is divided into two main components:
+The system is divided into three main components:
 - **Kernel (`kernel.py`)**: Handles core functionalities such as system commands, utilities, and basic operations.
 - **User Space (`user-space.py`)**: Provides user-facing commands, games, and network utilities.
+- **Cow's Shell (`csh.py`)**: A REPL environment that allows users to write and execute scripts in **Cow's Shell Scripting Language (CSH)**.
 
-MOO-OS is currently at version **v2.0.0** and is actively maintained.
+MOO-OS is currently at version **v2.1.0** and is actively maintained.
 
 ## Features
 
@@ -21,6 +22,7 @@ MOO-OS is currently at version **v2.0.0** and is actively maintained.
 - **`sysinfo`**: Displays system information about MOO-OS.
 - **`storage`**: Shows available storage (fixed at 1 TB for now).
 - **`exit`**: Shuts down MOO-OS.
+- **`shell`**: Displays the current shell name (default: `csh` - Cow's Shell).
 
 ### Cow-Themed Games and Fun
 - **`moogame`**: A guessing game where you try to guess the cow's secret number.
@@ -35,11 +37,37 @@ MOO-OS is currently at version **v2.0.0** and is actively maintained.
 - **`calc <expression>`**: A simple calculator for basic arithmetic.
 - **`editor`**: A mini text editor for creating and saving text files.
 - **`moo eat cowsay`**: Installs the `cowsay` utility.
+- **`csh`**: Enters the **Cow's Shell Scripting Language (CSH)** REPL environment.
 
 ### Network Utilities
 - **`ping <host>`**: Pings a host to check connectivity (default: 8.8.8.8).
 - **`download <url>`**: Downloads a file from the internet using a simulated `wget` command.
 - **`ip`**: Retrieves and displays your public IP address.
+
+## Cow Shell Scripting Language
+
+MOO-OS introduces **Cow Shell Scripting Language**, a fun and simple scripting language for writing cow-themed scripts. The `csh.py` file provides a REPL environment where users can execute Cow Shell Scripting Language Code
+
+### Supported Commands in Cow Shell Scripting Language 
+- **`polishcow('message');`**: Prints a message.
+- **`moo('prompt');`**: Prompts for user input.
+- **`count - <start> to <end>`**: Loops through a number range.
+- **`polishmath('expression');`**: Evaluates math expressions.
+- **`variable = value`**: Assigns a variable.
+- **`printvars`**: Displays all variables.
+- **`clearvars`**: Clears all variables.
+- **`random <min> to <max>`**: Generates a random number between `min` and `max`.
+- **`exit`**: Exits the Cow's Shell.
+
+### Example CSH Script
+```csh
+polishcow("Welcome to Cow's Shell!");
+moo("Enter your name");
+count - 1 to 5;
+polishmath("2 + 2 * 2");
+random 1 to 10;
+exit;
+```
 
 ## Installation
 
@@ -50,6 +78,7 @@ MOO-OS is easy to install and run. Follow these steps to get started:
    ```bash
    wget https://raw.githubusercontent.com/linuxfanboy4/moo-os/refs/heads/main/src/kernel.py
    wget https://raw.githubusercontent.com/linuxfanboy4/moo-os/refs/heads/main/src/user-space.py
+   wget https://raw.githubusercontent.com/linuxfanboy4/moo-os/refs/heads/main/src/csh.py
    ```
 
 2. **Run MOO-OS**:
@@ -59,7 +88,7 @@ MOO-OS is easy to install and run. Follow these steps to get started:
    ```
 
 3. **Start Exploring**:
-   Once MOO-OS is running, type `help` to see a list of available commands and start exploring the cow-themed world!
+   Once MOO-OS is running, type `help` to see a list of available commands and start exploring the cow-themed world
 
 ## Usage Examples
 
@@ -111,6 +140,11 @@ MOO-OS is easy to install and run. Follow these steps to get started:
   MOO-OS> cowsay Hello, MOO-OS!
   ```
 
+- Enter the Cow's Shell:
+  ```
+  MOO-OS> csh
+  ```
+
 ### Network Utilities
 - Ping a host:
   ```
@@ -126,8 +160,6 @@ MOO-OS is easy to install and run. Follow these steps to get started:
   ```
   MOO-OS> ip
   ```
-
----
 
 ## System Requirements
 
