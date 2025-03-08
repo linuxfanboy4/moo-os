@@ -40,7 +40,7 @@ def sysinfo_command():
     print("Node: localhost")
     print("Release: March 7 2025")
     print("Depends: Python")
-    print("Version: 1.7.1+")
+    print("Version: 2.0.0+")
     print("Machine: x86-64 MOO-OS")
     print("Processor: MOO-OS 0.0.1 Processor")
 
