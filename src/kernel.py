@@ -38,9 +38,9 @@ def sysinfo_command():
     print("System Information:")
     print("System: MOO-OS")
     print("Node: localhost")
-    print("Release: March 7 2025")
+    print("Release: March 8 2025")
     print("Depends: Python")
-    print("Version: 2.0.0+")
+    print("Version: 2.1.0")
     print("Machine: x86-64 MOO-OS")
     print("Processor: MOO-OS 0.0.1 Processor")
 
