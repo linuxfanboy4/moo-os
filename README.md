@@ -1,74 +1,163 @@
-# MOO-OS: A Whimsical Operating System
+# MOO-OS: The Most Moo-tivating Operating System
 
 ## Overview
-MOO-OS is a playful, cow-themed operating system designed for entertainment and lighthearted fun. This Python-based system offers a variety of commands and features that blend humor, creativity, and functionality. Dive into the whimsical world of MOO-OS and discover an operating system like no other.
 
-## Key Features
-- **Moo-inspired Commands**: Engage with commands that embody the spirit of a cow-themed OS, from mooing to weather forecasts.
-- **Mini Games**: Play guessing games and enjoy lighthearted entertainment.
-- **Text Editor**: A simple and efficient built-in text editor for quick note-taking.
-- **Fake Hacking Mode**: Explore a humorous take on "hacking," complete with percentage progressions.
-- **Fun and Functional Utilities**: Execute basic system tasks while having fun with the quirky features.
-- **Customizable Cow Sayings**: Install additional tools like `cowsay` to give your cows a voice.
-- **Random Fortune Generator**: Gain wisdom from cow-themed sayings.
+MOO-OS is a lightweight, cow-themed operating system built entirely in Python. Designed for fun and educational purposes, MOO-OS provides a playful environment where users can interact with a variety of cow-themed commands, utilities, and games. Whether you're looking to moo like a cow, play a guessing game, or even simulate a hacking session, MOO-OS has something for everyone.
 
-## Prerequisites
-To run MOO-OS, you'll need:
-- Python 3.6 or later installed on your system.
+The system is divided into two main components:
+- **Kernel (`kernel.py`)**: Handles core functionalities such as system commands, utilities, and basic operations.
+- **User Space (`user-space.py`)**: Provides user-facing commands, games, and network utilities.
 
-## Installation
-Follow these steps to install and launch MOO-OS:
-1. Download the script:
-   ```bash
-   wget https://raw.githubusercontent.com/linuxfanboy4/moo-os/refs/heads/main/moo.py
-   ```
-2. Run the script:
-   ```bash
-   python moo.py
-   ```
+MOO-OS is currently at version **2.0.0** and is actively maintained.
 
-## Usage
-Once MOO-OS is running, you can interact with it using a variety of commands. Below are some of the key commands and their functions.
+---
 
-### Basic Commands
-| Command      | Description                                                                 |
-|--------------|-----------------------------------------------------------------------------|
-| `moo`        | The OS will moo at you.                                                    |
-| `date`       | Displays the current date and time.                                        |
-| `echo <text>`| Repeats back the provided text.                                            |
-| `help`       | Lists all available commands and their descriptions.                      |
-| `exit`       | Shuts down MOO-OS.                                                        |
+## Features
 
-### Entertainment Commands
-| Command        | Description                                                                 |
-|----------------|-----------------------------------------------------------------------------|
-| `moogame`      | Play a number-guessing game with the cow.                                  |
-| `mooweather`   | Displays a humorous weather forecast.                                      |
-| `moohack`      | Simulates a fake hacking scenario for laughs.                              |
-| `moodisco`     | Activates a simulated disco party in the terminal.                        |
-| `milkshake`    | Provides a humorous response about milkshakes.                            |
+### Core Commands
+- **`moo`**: The OS moos at you!
+- **`date`**: Displays the current date and time.
+- **`echo`**: Repeats the provided text. Use `echo $SHELL` to see the shell path.
+- **`clear`**: Clears the terminal screen.
+- **`fortune`**: Displays a random cow-themed fortune.
+- **`sysinfo`**: Displays system information about MOO-OS.
+- **`storage`**: Shows available storage (fixed at 1 TB for now).
+- **`exit`**: Shuts down MOO-OS.
+
+### Cow-Themed Games and Fun
+- **`moogame`**: A guessing game where you try to guess the cow's secret number.
+- **`moospeak <text>`**: Translates your text into "Moo-speak."
+- **`mooweather`**: Provides a cow-themed weather forecast.
+- **`moohack`**: Simulates a hacking session with cow-themed humor.
+- **`moodisco`**: Starts a cow disco party with colorful text animations.
+- **`milkshake`**: A playful command that pretends to blend a milkshake.
 
 ### Utilities
-| Command         | Description                                                                 |
-|-----------------|-----------------------------------------------------------------------------|
-| `sysinfo`       | Displays system information.                                               |
-| `storage`       | Shows available storage space.                                             |
-| `calc <expr>`   | A basic calculator to solve arithmetic expressions (e.g., `calc 5 + 3`).   |
-| `editor`        | Opens a minimalistic text editor.                                          |
-| `fortune`       | Provides a random cow-themed fortune.                                      |
+- **`cowsay <text>`**: Makes a cow say something (requires installation via `moo eat cowsay`).
+- **`calc <expression>`**: A simple calculator for basic arithmetic.
+- **`editor`**: A mini text editor for creating and saving text files.
+- **`moo eat cowsay`**: Installs the `cowsay` utility.
 
-### Customization
-| Command             | Description                                                                 |
-|---------------------|-----------------------------------------------------------------------------|
-| `cowsay <text>`     | Displays a cow saying the provided text (requires `cowsay` to be installed).|
-| `moo eat cowsay`    | Installs the `cowsay` feature for customizable cow sayings.                 |
-| `cowsayhelp`        | Displays help information about the `cowsay` feature.                      |
+### Network Utilities
+- **`ping <host>`**: Pings a host to check connectivity (default: 8.8.8.8).
+- **`download <url>`**: Downloads a file from the internet using a simulated `wget` command.
+- **`ip`**: Retrieves and displays your public IP address.
 
-## Project Structure
-The script is written entirely in Python and uses built-in modules for functionality. It includes features like:
-- Random number generation using the `random` module.
-- Time-based actions using the `time` module.
-- Simple text handling and file operations.
+---
 
-## Development and Contribution
-Feel free to contribute to MOO-OS by forking the repository and submitting pull requests. All contributions are welcome to make MOO-OS even more feature-rich and fun!
+## Installation
+
+MOO-OS is easy to install and run. Follow these steps to get started:
+
+1. **Download the Required Files**:
+   Use `wget` to download the latest version of MOO-OS from the official repository:
+   ```bash
+   wget https://raw.githubusercontent.com/linuxfanboy4/moo-os/refs/heads/main/src/kernel.py
+   wget https://raw.githubusercontent.com/linuxfanboy4/moo-os/refs/heads/main/src/user-space.py
+   ```
+
+2. **Run MOO-OS**:
+   Execute the `user-space.py` file to start MOO-OS:
+   ```bash
+   python3 user-space.py
+   ```
+
+3. **Start Exploring**:
+   Once MOO-OS is running, type `help` to see a list of available commands and start exploring the cow-themed world!
+
+---
+
+## Usage Examples
+
+### Basic Commands
+- Display the current date and time:
+  ```
+  MOO-OS> date
+  ```
+
+- Clear the terminal screen:
+  ```
+  MOO-OS> clear
+  ```
+
+- Get a random cow-themed fortune:
+  ```
+  MOO-OS> fortune
+  ```
+
+### Games and Fun
+- Play the cow guessing game:
+  ```
+  MOO-OS> moogame
+  ```
+
+- Translate text into Moo-speak:
+  ```
+  MOO-OS> moospeak Hello, world!
+  ```
+
+- Simulate a hacking session:
+  ```
+  MOO-OS> moohack
+  ```
+
+### Utilities
+- Use the mini text editor:
+  ```
+  MOO-OS> editor
+  ```
+
+- Install the `cowsay` utility:
+  ```
+  MOO-OS> moo eat cowsay
+  ```
+
+- Make a cow say something:
+  ```
+  MOO-OS> cowsay Hello, MOO-OS!
+  ```
+
+### Network Utilities
+- Ping a host:
+  ```
+  MOO-OS> ping google.com
+  ```
+
+- Download a file from the internet:
+  ```
+  MOO-OS> download
+  ```
+
+- Retrieve your public IP address:
+  ```
+  MOO-OS> ip
+  ```
+
+---
+
+## System Requirements
+
+MOO-OS is designed to run on any system with Python 3 installed. It is lightweight and does not require any additional dependencies beyond the Python standard library.
+
+---
+
+## Contributing
+
+MOO-OS is an open-source project, and contributions are welcome! If you have ideas for new features, bug fixes, or improvements, feel free to fork the repository and submit a pull request.
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Commit your changes.
+4. Submit a pull request.
+
+---
+
+## License
+
+MOO-OS is released under the **MIT License**. See the `LICENSE` file in the repository for more details.
+
+---
+
+## Support
+
+For questions, issues, or feature requests, please open an issue on the [GitHub repository](https://github.com/linuxfanboy4/moo-os.git).
