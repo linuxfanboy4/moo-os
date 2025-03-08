@@ -6,7 +6,7 @@ import requests
 variables = {}
 
 def csh_welcome():
-    print("Welcome to Cow's Shell (CSh)! Type 'exit' to leave.")
+    print("Welcome to Cow's Shell Scripting (CSh)! Type 'exit' to leave.")
     print("You can write MOO-OS Scripting Language code here.")
     print("Supported Commands:")
     print("polishcow('message'); - Prints a message.")
