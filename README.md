@@ -8,9 +8,7 @@ The system is divided into two main components:
 - **Kernel (`kernel.py`)**: Handles core functionalities such as system commands, utilities, and basic operations.
 - **User Space (`user-space.py`)**: Provides user-facing commands, games, and network utilities.
 
-MOO-OS is currently at version **2.0.0** and is actively maintained.
-
----
+MOO-OS is currently at version **v2.0.0** and is actively maintained.
 
 ## Features
 
@@ -43,8 +41,6 @@ MOO-OS is currently at version **2.0.0** and is actively maintained.
 - **`download <url>`**: Downloads a file from the internet using a simulated `wget` command.
 - **`ip`**: Retrieves and displays your public IP address.
 
----
-
 ## Installation
 
 MOO-OS is easy to install and run. Follow these steps to get started:
@@ -64,8 +60,6 @@ MOO-OS is easy to install and run. Follow these steps to get started:
 
 3. **Start Exploring**:
    Once MOO-OS is running, type `help` to see a list of available commands and start exploring the cow-themed world!
-
----
 
 ## Usage Examples
 
@@ -139,8 +133,6 @@ MOO-OS is easy to install and run. Follow these steps to get started:
 
 MOO-OS is designed to run on any system with Python 3 installed. It is lightweight and does not require any additional dependencies beyond the Python standard library.
 
----
-
 ## Contributing
 
 MOO-OS is an open-source project, and contributions are welcome! If you have ideas for new features, bug fixes, or improvements, feel free to fork the repository and submit a pull request.
@@ -150,13 +142,9 @@ MOO-OS is an open-source project, and contributions are welcome! If you have ide
 3. Commit your changes.
 4. Submit a pull request.
 
----
-
 ## License
 
 MOO-OS is released under the **MIT License**. See the `LICENSE` file in the repository for more details.
-
----
 
 ## Support
 
