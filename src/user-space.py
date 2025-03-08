@@ -3,6 +3,7 @@ import random
 import subprocess
 import requests
 from kernel import *
+import csh
 
 def moo_welcome():
     print(r"""    
@@ -23,6 +24,7 @@ Cow-tastic commands:
   editor     - Open the mini text editor. Type and save your files!  
   sysinfo    - Display system information.  
   storage    - Check available storage.  
+  shell      - Show the current shell name.  
 
 Moo Utilities:  
   moo        - The OS moos at you!  
@@ -40,7 +42,11 @@ Network Utilities:
   ping <host>  - Ping a host to check connectivity (default: 8.8.8.8).  
   download <url>  - Download a file from the internet using wget.  
   ip             - Get the current public IP address.  
+  csh            - Enter the Cow's Shell (CSh).  
 """)
+
+def shell_command():
+    print("csh (Cow's Shell)")
 
 def moogame():
     print("Guess the cow's secret number between 1 and 10!")  
@@ -97,12 +103,11 @@ def calculator(expression):
     except Exception:  
         print("Moo, that didn't work. Try again, math wizard!")
 
-# New network functionality: Ping command
 def ping_command(host="8.8.8.8"):  
     print(f"Pinging {host}...")  
     try:  
         response = subprocess.run(  
-            ["ping", "-c", "4", host] if platform.system().lower() != "windows" else ["ping", host],  
+            ["ping", "-c", "4", host],  
             stdout=subprocess.PIPE,  
             stderr=subprocess.PIPE,  
             text=True  
@@ -111,7 +116,6 @@ def ping_command(host="8.8.8.8"):
     except Exception as e:  
         print(f"Error pinging {host}: {e}")
 
-# New network functionality: Download command (using requests to simulate wget)
 def download_file(url, filename):  
     try:  
         print(f"Downloading file from {url}...")  
@@ -125,7 +129,6 @@ def download_file(url, filename):
     except Exception as e:  
         print(f"Error downloading file: {e}")
 
-# New network functionality: IP command
 def ip_command():  
     try:  
         response = requests.get("https://api.ipify.org")  
@@ -138,7 +141,7 @@ def ip_command():
 
 def main():  
     moo_welcome()  
-    
+
     while True:  
         cmd = input("MOO-OS> ").strip().lower()  
 
@@ -197,6 +200,10 @@ def main():
             download_file(url, filename)  
         elif cmd == "ip":  
             ip_command()  
+        elif cmd == "shell":  
+            shell_command()  
+        elif cmd == "csh":  
+            csh.csh_command()  
         else:  
             print("Unknown command. Type 'help' to discover more moo-tastic features!")
 
